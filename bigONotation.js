@@ -54,7 +54,7 @@ console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`); // Second algorithm i
 // If not time, then what?
 
 // Rather than counting seconds, which are so variable...
-// Let@s count the number of simple operations the computer has to perform!
+// Let's count the number of simple operations the computer has to perform!
 
 function addUpTo(n) {
   return (n * (n + 1)) / 2; // It has 1 multiplication (*), 1 addition (+), and 1 division (/)
