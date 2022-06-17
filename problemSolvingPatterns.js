@@ -87,22 +87,22 @@ function validAnagram(first, second) {
     return false;
   }
 
-  const lookup = {};
+  const obj = {};
 
   for (let i = 0; i < first.length; i++) {
     let letter = first[i];
     // if letter exists, increment, otherwise set to 1
-    lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
+    obj[letter] ? (obj[letter] += 1) : (obj[letter] = 1);
   }
-  console.log(lookup);
+  console.log(obj);
 
   for (let i = 0; i < second.length; i++) {
     let letter = second[i];
     // can't find letter or letter is zero then it's not an anagram
-    if (!lookup[letter]) {
+    if (!obj[letter]) {
       return false;
     } else {
-      lookup[letter] -= 1;
+      obj[letter] -= 1;
     }
   }
 
@@ -154,7 +154,7 @@ function sumZero2(arr) {
 } // Space Complexity -> O(1)
 
 // ========================== countUniqueValues ===============================
-// Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be begative numbers in the array, but it will always be sorted.
+// Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
 // ============================================================================
 
 function countUniqueValues(arr) {
@@ -165,7 +165,7 @@ function countUniqueValues(arr) {
       i++;
       arr[i] = arr[j];
     }
-    console.log(i, j);
+    // console.log(i, j);
   }
   return i + 1;
 }
